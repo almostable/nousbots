@@ -1,0 +1,48 @@
+'use client'
+
+import { CheckmarkSquare01Icon } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
+import {
+  InfoIcon,
+  Loader2Icon,
+  OctagonXIcon,
+  TriangleAlertIcon,
+} from 'lucide-react'
+import { useTheme } from 'next-themes'
+import { Toaster as Sonner, type ToasterProps } from 'sonner'
+
+const Toaster = ({ ...props }: ToasterProps) => {
+  const { theme = 'system' } = useTheme()
+
+  return (
+    <Sonner
+      position="top-center"
+      theme={theme as ToasterProps['theme']}
+      className="toaster group"
+      toastOptions={{
+        classNames: {
+          toast: 'rounded-md! pl-4! px-3! py-3! border-none! gap-2! w-fit!',
+        },
+      }}
+      icons={{
+        success: (
+          <HugeiconsIcon icon={CheckmarkSquare01Icon} className="size-4" />
+        ),
+        info: <InfoIcon className="size-4" />,
+        warning: <TriangleAlertIcon className="size-4" />,
+        error: <OctagonXIcon className="size-4" />,
+        loading: <Loader2Icon className="size-4 animate-spin" />,
+      }}
+      style={
+        {
+          '--normal-bg': 'var(--popover)',
+          '--normal-text': 'var(--popover-foreground)',
+          '--border-radius': 'var(--radius)',
+        } as React.CSSProperties
+      }
+      {...props}
+    />
+  )
+}
+
+export { Toaster }

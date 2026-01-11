@@ -1,0 +1,23 @@
+# --- Игнорируем везде (в корне и во всех подпапках) ---
+node_modules/
+.env*
+!.env.example
+*.log
+.DS_Store
+.vercel
+*.tsbuildinfo
+
+# --- Bun (везде) ---
+bun.lockb
+# (если решишь хранить лок-файлы, просто закомментируй строку выше)
+
+# --- Frontend (Next.js) специфичное ---
+# Ищем эти папки в любой вложенности
+**/.next/
+**/out/
+**/build/
+**/next-env.d.ts
+
+# --- Backend / Общее ---
+**/dist/
+**/coverage/

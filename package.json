@@ -1,0 +1,18 @@
+{
+  "name": "nousbots",
+  "devDependencies": {
+    "prettier": "^3.7.4"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "bun --filter \"*\" dev",
+    "install:all": "bun install"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "dependencies": {
+    "ai": "^6.0.39"
+  }
+}

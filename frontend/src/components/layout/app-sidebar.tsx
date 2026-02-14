@@ -9,8 +9,8 @@ export function AppSidebar() {
   return (
     <div className="hidden md:flex flex-col justify-between bg-sidebar h-screen w-full max-w-75 p-2 pt-4">
       <div className="flex flex-col items-start gap-6">
-        <div className="px-3 py-2 pb-2.5 hover:bg-accent rounded-md cursor-pointer">
-          <BrandLogo />
+        <div className="px-3.5 py-2 pb-2.5 hover:bg-accent rounded-md cursor-pointer">
+          <BrandLogo height={30} />
         </div>
         <div className="w-full">
           <NavMain />

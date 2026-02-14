@@ -30,7 +30,7 @@ export function NavUser() {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <div className="cursor-pointer">
-              <div className="flex items-center gap-2.5 px-4 py-2 hover:bg-card rounded-4xl">
+              <div className="flex items-center gap-2.5 px-3.5 py-2.5 hover:bg-accent rounded-md">
                 <Image
                   src={currentUserData?.avatarUrl || '/user_default.png'}
                   alt={currentUserData?.username || ''}

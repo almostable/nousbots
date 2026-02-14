@@ -79,7 +79,7 @@ export function ChatList({ isMobile = false }: { isMobile?: boolean }) {
             <div
               key={chat.id}
               className={clsx(
-                'flex items-center justify-between relative px-4 py-2 hover:bg-accent rounded-md gap-2',
+                'flex items-center justify-between relative px-3.5 py-2.5 hover:bg-accent rounded-md gap-2',
                 isActive ? 'bg-sidebar-accent' : ''
               )}
             >

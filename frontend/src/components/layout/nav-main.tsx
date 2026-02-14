@@ -14,7 +14,7 @@ export function NavMain() {
       <Link href={'/app'}>
         <div
           className={clsx(
-            'flex items-center gap-2.5 px-4 py-2.5 w-full rounded-md hover:bg-accent',
+            'flex items-center gap-2.5 px-3.5 py-2.5 w-full rounded-md hover:bg-accent',
             p === '/app' ? 'bg-sidebar-accent' : ''
           )}
         >
@@ -25,7 +25,7 @@ export function NavMain() {
       <Link href={'/app/bot/my'}>
         <div
           className={clsx(
-            'flex items-center gap-2.5 px-4 py-2.5 w-full rounded-md hover:bg-accent',
+            'flex items-center gap-2.5 px-3.5 py-2.5 w-full rounded-md hover:bg-accent',
             p === '/app/bot/my' ? 'bg-sidebar-accent' : ''
           )}
         >

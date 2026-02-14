@@ -16,8 +16,8 @@ export function AppSidebar() {
           <NavMain />
         </div>
         <div className="flex flex-col gap-2 w-full">
-          <span className="text-sm ml-4 text-foreground/40 font-medium  ">
-            In progress
+          <span className="text-sm ml-3 text-foreground/40 font-medium  ">
+            Chats
           </span>
           <ChatList />
         </div>

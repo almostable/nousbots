@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { useGetMessagesChat, useGetProgressChat } from '../hook/use-chat'
-import { CircleAlert, Loader, RefreshCcw } from 'lucide-react'
+import { CircleAlert, RefreshCcw } from 'lucide-react'
 import { GetProgressChatResponse, Message, User } from '@backend/unit/chat/type'
 import clsx from 'clsx'
 import { Spinner } from '@/components/ui/spinner'
@@ -22,7 +22,7 @@ import {
 import { useQueryClient } from '@tanstack/react-query'
 import { ChatInput } from './chat-input'
 import { Bot } from '@backend/dal/schema'
-import { ChatProgress } from './chat-progress'
+import { streamdownComponents } from '@/components/ui/sd-components'
 
 export function ChatPage({ id }: { id: string }) {
   const {
@@ -235,6 +235,11 @@ export function ChatContent({
                                 <Streamdown
                                   key={idx}
                                   rehypePlugins={[defaultRehypePlugins.harden]}
+                                  components={
+                                    status === 'streaming'
+                                      ? streamdownComponents
+                                      : undefined
+                                  }
                                 >
                                   {part.text}
                                 </Streamdown>

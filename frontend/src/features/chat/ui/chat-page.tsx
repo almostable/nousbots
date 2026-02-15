@@ -129,9 +129,6 @@ export function ChatContent({
 
     sendMessage({ text: input })
     setInput('')
-    // requestAnimationFrame(() => {
-    //   scrollToBottom()
-    // })
   }
 
   useEffect(() => {
@@ -154,9 +151,6 @@ export function ChatContent({
 
   return (
     <div className="flex flex-col w-full h-screen">
-      {/* <div>
-        <ChatProgress percent={progressData.stats.percent} />
-      </div> */}
       <div
         className={clsx(
           'flex-1 w-full overflow-y-auto transition-opacity duration-150 ease-out',
@@ -245,32 +239,7 @@ export function ChatContent({
                                 </Streamdown>
                               )
                             }
-
-                            // if (part.type === 'tool-completeStep') {
-                            //   if (part.state !== 'output-available') {
-                            //     return (
-                            //       <div
-                            //         key={part.toolCallId || idx}
-                            //         className="animate-pulse py-2 text-gray-500"
-                            //       >
-                            //         Думаю, ищу, решаю...
-                            //       </div>
-                            //     )
-                            //   }
-
-                            //   return null
-                            // }
                           })}
-
-                          {/*<Streamdown
-                            rehypePlugins={[defaultRehypePlugins.harden]}
-                          >
-                            {m.parts
-                              .map((part) => {
-                                if (part.type === 'text') return part.text
-                              })
-                              .join('')}
-                          </Streamdown>*/}
                         </div>
                       </div>
                       {isLast &&
@@ -359,9 +328,6 @@ export function ChatContent({
             stats={progressData.stats}
           />
         </div>
-        {/*<span className="text-xs text-neutral-700">
-          Nous may make mistakes, so double-check its answers.
-        </span>*/}
       </div>
     </div>
   )
